@@ -72,13 +72,13 @@
     <div class="main">
         <div class="section section-nude">
             <div class="container">
-                <h3>Add Product</h3>
-                <form>
+                <h3>Add Event</h3>
+                <form method="post" action="../functions/new_event.php">
                     <div class="row">
                         <div class="col-md-7 col-sm-7">
                             <div class="form-group">
                                 <h6> Event Name <span class="icon-danger">*</span></h6>
-                                <input type="text" class="form-control border-input" placeholder="enter the product name here...">
+                                <input type="text" name="name" class="form-control border-input" placeholder="Event name">
                             </div>
                             <div class="row price-row">
                                 <div class="col-md-6">

@@ -48,7 +48,7 @@
         <div class="section section-nude">
             <div class="container">
                 <h3>Add Faculty Details</h3>
-                <form>
+                <form method="post" action="../functions/new_faculty.php">
                     <div class="row">
                         <div class="col-md-5 col-sm-5">
                             <h6>Photo</h6>
@@ -78,7 +78,7 @@
                                 <div class="col-md-6">
                                     <h6>Date Of Joining<span class="icon-danger">*</span></h6>
                                     <div class="input-group border-input">
-                                        <input type="text" value="" placeholder="enter price" class="form-control border-input">
+                                        <input type="text" name="date" value="" placeholder="enter price" class="form-control border-input">
                                         <span class="input-group-addon"></span>
                                     </div>
                                 </div>
