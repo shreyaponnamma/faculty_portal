@@ -11,7 +11,7 @@ include('../config/config.php');
     <link rel="icon" type="image/png" href="assets/img/favicon.ico">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-    <title>Paper Kit by Creative Tim</title>
+    <title>Faculty Detils</title>
 
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
@@ -81,7 +81,7 @@ include('../config/config.php');
                     $sql = "select * from faculty";
                     $row = mysqli_query($conn, $sql);
                     while ($result = mysqli_fetch_assoc($row)) {
-                        $id1 = $result['fid'];
+                        $id = $result['fid'];
 
                         echo " <div class=\"col-md-3 col-sm-6\">
                         <div class=\"card card-user\">
@@ -101,9 +101,9 @@ include('../config/config.php');
                                 </p>
                             </div>
                             <div class=\"card-footer text-center\">
-                                <button href=\"#\" class=\"btn btn-icon\"><i class=\"ti-edit\"></i> Edit Profile</button>
+                                <button id='".$id."' onClick ='user(this.id)'  type='submit' class=\"btn btn-icon\"><i class=\"ti-edit\"></i> View Profile</input>
                             </div>
-                        </div> <!-- end card -->
+                        </div>
                     </div>";
                     }
 ?>
@@ -142,6 +142,16 @@ include('../config/config.php');
         </div>
     </div>
 </footer>
+<script type ="text/javascript">
+    function user(clicked_id) {
+        if (window.confirm('Do you want to view?')){
+            window.location.href = ("../functions/user.php?id="+clicked_id);
+
+        } else {
+            die();
+        }
+    }
+</script>
 </body>
 <script src="assets/js/jquery-1.10.2.js" type="text/javascript"></script>
 <script src="assets/js/jquery-ui-1.10.4.custom.min.js" type="text/javascript"></script>
