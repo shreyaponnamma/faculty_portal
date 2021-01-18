@@ -34,7 +34,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="http://www.creative-tim.com">
+            <a href="https://vvce.ac.in/department/computer-science-engineering/">
                 <div class="logo-container">
                     <div class="logo">
                         <img src="assets/img/new_logo.png" alt="Creative Tim Logo">
@@ -58,7 +58,7 @@
                     <a class="btn btn-neutral btn-simple" data-id="#demoPay" data-scroll="true" href="javascript:void(0)">Free Demo</a>
                 </li>-->
                 <li>
-                    <a href="http://www.creative-tim.com/product/paper-kit-pro" class="btn btn-danger btn-fill"><i class="fa fa-shopping-cart"></i> Buy now</a>
+                    <a href="../functions/logout.php" class="btn btn-danger btn-fill"><i class="fa fa-power-off"></i> Log out</a>
                 </li>
             </ul>
         </div><!-- /.navbar-collapse -->
@@ -69,18 +69,15 @@
     <div class="main">
         <div class="section section-header section-dark section-dark-filter">
             <div class="image-background">
-                <img src="assets/img/presentation-page/header_hd.jpg" alt="Paper Kit Pro"/>
+                <img src="../images/vvce.jpg" />
             </div>
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 col-md-offset-1">
                         <div class="card card-image card-shadow">
                             <img src="assets/img/presentation-page/mandala.jpg" alt="" width="550" height="380"/>
-                            <h2 class="title-brand">
-                                Paper Kit
-                                <div class="type">PRO</div>
-                            </h2>
-                            <small>Premium Bootstrap UI Kit</small>
+    
+                            <small>Vidya Vardhaka College of Engineering</small>
                         </div>
 
                     </div>
@@ -91,10 +88,10 @@
             <div class="container">
                 <div class="row">
                     <div class="title text-center">
-                        <h2>Beautiful Examples</h2>
-                        <p>Paper Kit Pro comes with a large number of example pages, that give you to option to quickly setup the basic flows for your application. From registering to building your profile or setting a blog, we've got you covered.</p>
+                        <h4>Dept of Computer Science & Engineering</h4>
+                        <p>The Department of Computer Science and Engineering shall create professionally competent and socially responsible engineers capable of working in global environment.</p>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <div class="details-text">
                             Add Faculty Details
                         </div>
@@ -104,7 +101,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <div class="details-text">
                             Add Event Details
                         </div>
@@ -114,12 +111,12 @@
                             </a>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <div class="details-text">
                             Faculty Details
                         </div>
                         <div class="card card-image">
-                            <a target="_blank" href="fac_details.php">
+                            <a target="_blank" href="fac_card.php">
                                 <img src="assets/img/presentation-page/examples/blog.jpg">
                             </a>
                         </div>
@@ -127,7 +124,7 @@
                     </div>
 
 
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <div class="details-text">
                             Event Details
                         </div>

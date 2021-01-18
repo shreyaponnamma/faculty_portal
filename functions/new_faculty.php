@@ -23,11 +23,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $stmt->bind_param('dss',$fid,$fname,$date);
     if ($stmt->execute()) {
         echo "<script>alert('faculty added')</script>";
-        echo "<script>window.location.replace('../public/fac_details.php')</script>";
+        echo "<script>window.location.replace('../public/fac_card.php')</script>";
     } else {
         error_log($stmt->error);
         echo "<script>alert('faculty insertion failed !!')</script>";
-        echo "<script>window.location.replace('../public/fac_details.php')</script>";
+        echo "<script>window.location.replace('../public/fac_card.php')</script>";
     }
 
 
