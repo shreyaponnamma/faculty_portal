@@ -37,10 +37,10 @@ include('../config/config.php');
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="http://www.creative-tim.com">
+            <a href="#">
                 <div class="logo-container">
                     <div class="logo">
-                        <img src="../images/" alt="Creative Tim Logo">
+                        <img  src="../images/cs.png" >
                     </div>
                     <div class="brand">
                         VVCE
@@ -50,16 +50,19 @@ include('../config/config.php');
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="navigation-example-2">
+        <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a class="btn btn-danger btn-simple" href="presentation.html#components">Components</a>
+                <!--<li>
+                    <a class="btn btn-neutral btn-simple" data-id="#components" data-scroll="true" href="javascript:void(0)">Components</a>
                 </li>
                 <li>
-                    <a class="btn btn-danger btn-simple" href="presentation.html#examples">Examples</a>
+                    <a class="btn btn-neutral btn-simple" data-id="#examples" data-scroll="true" href="javascript:void(0)">Examples</a>
                 </li>
                 <li>
-                    <a href="http://www.creative-tim.com/product/paper-kit-pro" class="btn btn-danger btn-fill"><i class="fa fa-shopping-cart"></i> Buy now</a>
+                    <a class="btn btn-neutral btn-simple" data-id="#demoPay" data-scroll="true" href="javascript:void(0)">Free Demo</a>
+                </li>-->
+                <li>
+                    <a href="../functions/logout.php" class="btn btn-danger btn-fill"><i class="fa fa-power-off"></i> Log out</a>
                 </li>
             </ul>
         </div><!-- /.navbar-collapse -->

@@ -143,33 +143,6 @@
 </div>
 
 
-<footer class="footer-demo section-nude">
-    <div class="container">
-        <nav class="pull-left">
-            <ul>
-
-                <li>
-                    <a href="http://www.creative-tim.com">
-                        Creative Tim
-                    </a>
-                </li>
-                <li>
-                    <a href="http://blog.creative-tim.com">
-                        Blog
-                    </a>
-                </li>
-                <li>
-                    <a href="http://www.creative-tim.com/license">
-                        Licenses
-                    </a>
-                </li>
-            </ul>
-        </nav>
-        <div class="copyright pull-right">
-            &copy; 2016, made with <i class="fa fa-heart heart"></i> by Creative Tim
-        </div>
-    </div>
-</footer>
 </body>
 
 <script src="assets/js/jquery-1.10.2.js" type="text/javascript"></script>

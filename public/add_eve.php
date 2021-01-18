@@ -37,29 +37,19 @@
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="navigation-example-2">
+        <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
-
-
-                <li>
-                    <a href="#" class="btn btn-icon btn-sm btn-fill" data-toggle="dropdown">
-                        <i class="fa fa-envelope"></i>
-                    </a>
-                    <span class="label label-danger notification-bubble">2</span>
+                <!--<li>
+                    <a class="btn btn-neutral btn-simple" data-id="#components" data-scroll="true" href="javascript:void(0)">Components</a>
                 </li>
-                <li class="dropdown">
-                    <a href="#" class="profile-photo dropdown-toggle" data-toggle="dropdown">
-                        <div class="profile-photo-small">
-                            <img src="assets/img/cristina.jpg" alt="Circle Image" class="img-circle img-responsive img-no-padding">
-                        </div>
-                    </a>
-
-                    <ul class="dropdown-menu dropdown-menu-right">
-                        <li><a href="#">Me</a></li>
-                        <li><a href="#">Settings</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#">Sign out</a></li>
-                    </ul>
+                <li>
+                    <a class="btn btn-neutral btn-simple" data-id="#examples" data-scroll="true" href="javascript:void(0)">Examples</a>
+                </li>
+                <li>
+                    <a class="btn btn-neutral btn-simple" data-id="#demoPay" data-scroll="true" href="javascript:void(0)">Free Demo</a>
+                </li>-->
+                <li>
+                    <a href="../functions/logout.php" class="btn btn-danger btn-fill"><i class="fa fa-power-off"></i> Log out</a>
                 </li>
             </ul>
         </div><!-- /.navbar-collapse -->

@@ -43,6 +43,23 @@ include('../config/config.php');
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <!--<li>
+                    <a class="btn btn-neutral btn-simple" data-id="#components" data-scroll="true" href="javascript:void(0)">Components</a>
+                </li>
+                <li>
+                    <a class="btn btn-neutral btn-simple" data-id="#examples" data-scroll="true" href="javascript:void(0)">Examples</a>
+                </li>
+                <li>
+                    <a class="btn btn-neutral btn-simple" data-id="#demoPay" data-scroll="true" href="javascript:void(0)">Free Demo</a>
+                </li>-->
+                <li>
+                    <a href="../functions/logout.php" class="btn btn-danger btn-fill"><i class="fa fa-power-off"></i> Log out</a>
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+
     </div><!-- /.container-->
 </nav>
 
