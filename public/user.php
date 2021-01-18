@@ -3,8 +3,8 @@ session_start();
 
 include('../config/config.php');
 
+$id = $_GET['id'];
 ?>
-
 <!doctype html>
 <html lang="en">
 <head>

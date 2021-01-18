@@ -40,10 +40,10 @@ include('../config/config.php');
             <a href="http://www.creative-tim.com">
                 <div class="logo-container">
                     <div class="logo">
-                        <img src="assets/img/new_logo.png" alt="Creative Tim Logo">
+                        <img src="../images/" alt="Creative Tim Logo">
                     </div>
                     <div class="brand">
-                        Creative Tim
+                        VVCE
                     </div>
                 </div>
             </a>
@@ -145,7 +145,7 @@ include('../config/config.php');
 <script type ="text/javascript">
     function user(clicked_id) {
         if (window.confirm('Do you want to view?')){
-            window.location.href = ("../functions/user.php?id="+clicked_id);
+            window.location.href = ("user.php?id="+clicked_id);
 
         } else {
             die();
