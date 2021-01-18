@@ -99,7 +99,7 @@
                             Add Faculty Details
                         </div>
                         <div class="card card-image card-hover-effect">
-                            <a target="_blank" href="examples/twitter-redesign.html">
+                            <a target="_blank" href="reg.php">
                                 <img src="assets/img/presentation-page/examples/twitter-redesign.png">
                             </a>
                         </div>
@@ -109,17 +109,17 @@
                             Add Event Details
                         </div>
                         <div class="card card-image">
-                            <a target="_blank" href="examples/add-product.html">
+                            <a target="_blank" href="add_eve.php">
                                 <img src="assets/img/presentation-page/examples/twitter-redesign.png">
                             </a>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="details-text">
-                            Dashboard
+                            Faculty Details
                         </div>
                         <div class="card card-image">
-                            <a target="_blank" href="examples/blog.html">
+                            <a target="_blank" href="fac_details.php">
                                 <img src="assets/img/presentation-page/examples/blog.jpg">
                             </a>
                         </div>
@@ -129,10 +129,10 @@
 
                     <div class="col-md-4">
                         <div class="details-text">
-                            D
+                            Event Details
                         </div>
                         <div class="card card-image">
-                            <a target="_blank" href="examples/blog.html">
+                            <a target="_blank" href="event_details.php">
                                 <img src="assets/img/presentation-page/examples/blog.jpg">
                             </a>
                         </div>

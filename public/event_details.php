@@ -1,4 +1,9 @@
+<?php
+session_start();
 
+include('../config/config.php');
+
+?>
 
 <!doctype html>
 <html lang="en">
@@ -50,113 +55,70 @@
                 </div>
                 <div class="row">
 
-                    <div class="col-md-8 col-md-offset-2">
+                    <div class="col-md-12">
                         <h4><small>Simple With Actions</small></h4>
                         <div class="table-responsive">
-                            <table class="table">
-                                <thead>
-                                <tr>
-                                    <th class="text-center">#</th>
-                                    <th>Name</th>
-                                    <th>Job Position</th>
-                                    <th>Since</th>
-                                    <th class="text-right">Salary</th>
-                                    <th class="text-right">Actions</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td class="text-center">1</td>
-                                    <td>Andrew Mike</td>
-                                    <td>Develop</td>
-                                    <td>2013</td>
-                                    <td class="text-right">&euro; 99,225</td>
-                                    <td class="td-actions text-right">
-                                        <button type="button" rel="tooltip" title="View Profile" class="btn btn-info btn-simple btn-sm">
-                                            <i class="fa fa-user"></i>
-                                        </button>
-                                        <button type="button" rel="tooltip" title="Edit Profile" class="btn btn-success btn-simple btn-sm">
-                                            <i class="fa fa-edit"></i>
-                                        </button>
-                                        <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-sm">
-                                            <i class="fa fa-times"></i>
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr>
+                            <?php echo"   <table class='table'>
+                                    <thead class='text-primary'>
+                                    <th>
+                                        Event Id
+                                    </th>
+                                    <th>
+                                       Name
+                                    </th>
+                                    <th>
+                                        Start Date
+                                    </th>
+                                    <th >
+                                        End Date
+                                    </th>
+                                    <th>
+                                        Expenditure
+                                    </th>
+                                    <th>
+                                        Type
+                                    </th>
+                                    <th>
+                                        Members
+                                    </th>
+                                    <th>
+                                        Target Audience
+                                    </th>
+                                    </thead>";
 
-                                    <td class="text-center">2</td>
-                                    <td>John Doe</td>
-                                    <td>Design</td>
-                                    <td>2012</td>
-                                    <td class="text-right">&euro; 89,241</td>
-                                    <td class="td-actions text-right">
-                                        <button type="button" rel="tooltip" title="View Profile" class="btn btn-info btn-simple btn-sm">
-                                            <i class="fa fa-user"></i>
+
+                            $sql = "select * from events";
+                            $row = mysqli_query($conn, $sql);
+                            while ($result = mysqli_fetch_assoc($row)) {
+                                $id1 = $result['eid'];
+                                echo "<tr>
+                                        <td>" . $result['eid'] . "</td>
+                                        <td>" . $result['eventname'] . "</td>
+                                        <td>" . $result['eventstartdate'] . "</td>
+                                        <td>" . $result['eventenddate'] . "</td>
+                                        <td>" . $result['totalexpenditure'] . "</td>
+                                        <td>" . $result['eventtype'] . "</td>
+                                        <td>" . $result['eventmembers'] . "</td>
+                                        <td>" . $result['targetaudience'] . "</td>   
+                                        
+                                        <td class=\"td-actions text-right\">
+                                        <button type=\"button\" rel=\"tooltip\" title=\"View Profile\" class=\"btn btn-info btn-simple btn-sm\">
+                                            <i class=\"fa fa-user\"></i>
                                         </button>
-                                        <button type="button" rel="tooltip" title="Edit Profile" class="btn btn-success btn-simple btn-sm">
-                                            <i class="fa fa-edit"></i>
+                                        <button type=\"button\" rel=\"tooltip\" title=\"Edit Profile\" class=\"btn btn-success btn-simple btn-sm\">
+                                            <i class=\"fa fa-edit\"></i>
                                         </button>
-                                        <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-sm">
-                                            <i class="fa fa-times"></i>
+                                        <button type=\"button\" rel=\"tooltip\" title=\"Remove\" class=\"btn btn-danger btn-simple btn-sm\">
+                                            <i class=\"fa fa-times\"></i>
                                         </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="text-center">3</td>
-                                    <td>Alex Mike</td>
-                                    <td>Design</td>
-                                    <td>2010</td>
-                                    <td class="text-right">&euro; 92,144</td>
-                                    <td class="td-actions text-right">
-                                        <button type="button" rel="tooltip" title="View Profile" class="btn btn-info btn-simple btn-sm">
-                                            <i class="fa fa-user"></i>
-                                        </button>
-                                        <button type="button" rel="tooltip" title="Edit Profile" class="btn btn-success btn-simple btn-sm">
-                                            <i class="fa fa-edit"></i>
-                                        </button>
-                                        <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-sm">
-                                            <i class="fa fa-times"></i>
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="text-center">4</td>
-                                    <td>Mike Monday</td>
-                                    <td>Marketing</td>
-                                    <td>2013</td>
-                                    <td class="text-right">&euro; 49,990</td>
-                                    <td class="td-actions text-right">
-                                        <button type="button" rel="tooltip" title="View Profile" class="btn btn-info btn-simple btn-sm">
-                                            <i class="fa fa-user"></i>
-                                        </button>
-                                        <button type="button" rel="tooltip" title="Edit Profile" class="btn btn-success btn-simple btn-sm">
-                                            <i class="fa fa-edit"></i>
-                                        </button>
-                                        <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-sm">
-                                            <i class="fa fa-times"></i>
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="text-center">5</td>
-                                    <td>Paul Dickens</td>
-                                    <td>Communication</td>
-                                    <td>2016</td>
-                                    <td class="text-right">&euro; 69,201</td>
-                                    <td class="td-actions text-right">
-                                        <button type="button" rel="tooltip" title="View Profile" class="btn btn-info btn-simple btn-sm">
-                                            <i class="fa fa-user"></i>
-                                        </button>
-                                        <button type="button" rel="tooltip" title="Edit Profile" class="btn btn-success btn-simple btn-sm">
-                                            <i class="fa fa-edit"></i>
-                                        </button>
-                                        <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-sm">
-                                            <i class="fa fa-times"></i>
-                                        </button>
-                                    </td>
-                                </tr>
-                                </tbody>
+                                    </td>                                
+                                         
+                                    </tr>";
+
+                            }
+                            ?>
+
+
                             </table>
                         </div>
                     </div>
@@ -167,33 +129,6 @@
 </div>
 
 
-<footer class="footer-demo footer-black">
-    <div class="container">
-        <nav class="pull-left">
-            <ul>
-
-                <li>
-                    <a href="http://www.creative-tim.com">
-                        Creative Tim
-                    </a>
-                </li>
-                <li>
-                    <a href="http://blog.creative-tim.com">
-                        Blog
-                    </a>
-                </li>
-                <li>
-                    <a href="http://www.creative-tim.com/product/rubik">
-                        Licenses
-                    </a>
-                </li>
-            </ul>
-        </nav>
-        <div class="copyright pull-right">
-            &copy; 2016, made with <i class="fa fa-heart heart"></i> by Creative Tim
-        </div>
-    </div>
-</footer>
 
 </body>
 
