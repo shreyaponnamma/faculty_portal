@@ -12,24 +12,26 @@ if ($_SESSION['role'] != 'admin') {
 }
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $usn = mysqli_real_escape_string($connect, $_POST["usn"]);
-    $mno = mysqli_real_escape_string($connect, $_POST["mno"]);
-    $date = mysqli_real_escape_string($connect, $_POST["date"]);
-    $title = mysqli_real_escape_string($connect, $_POST["title"]);
-    $level = mysqli_real_escape_string($connect, $_POST["level"]);
-    $eve = mysqli_real_escape_string($connect, $_POST["eva"]);
+    $name = mysqli_real_escape_string($conn, $_POST["name"]);
+    $Sdate = mysqli_real_escape_string($conn, $_POST["start"]);
+    $Edate = mysqli_real_escape_string($conn, $_POST["end"]);
+    $expen = mysqli_real_escape_string($conn, $_POST["expen"]);
+    $type = mysqli_real_escape_string($conn, $_POST["type"]);
+    $members = mysqli_real_escape_string($conn, $_POST["members"]);
+    $audience = mysqli_real_escape_string($conn, $_POST["audience"]);
+    $report = mysqli_real_escape_string($conn, $_POST["report"]);
 
 
-    $query1 = "INSERT INTO speech (usn,m_no,date,title,level,evaluator) VALUES(?,?,?,?,?,?)";
-    $stmt = $connect->prepare($query1);
-    $stmt->bind_param('sdssss',$usn, $mno, $date, $title, $level, $eve);
+    $query1 = "INSERT INTO events (eventname,eventstartdate,eventenddate,totalexpenditure,eventtype,eventmembers,targetaudience,eventreport) VALUES(?,?,?,?,?,?,?,?)";
+    $stmt = $conn->prepare($query1);
+    $stmt->bind_param('sssdssss',$name, $Sdate, $Edate, $expen, $type, $members, $audience, $report);
     if ($stmt->execute()) {
-        echo "<script>alert('Speech added')</script>";
-        echo "<script>window.location.replace('../public/speech_detail.php')</script>";
+        echo "<script>alert('Event added')</script>";
+        echo "<script>window.location.replace('../public/event_details.php')</script>";
     } else {
         error_log($stmt->error);
-        echo "<script>alert('Speech insertion failed !!')</script>";
-        echo "<script>window.location.replace('../public/speech_detail.php')</script>";
+        echo "<script>alert('Event insertion failed !!')</script>";
+        echo "<script>window.location.replace('../public/event_details.php')</script>";
     }
 
 
