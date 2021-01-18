@@ -84,7 +84,7 @@
                                 <div class="col-md-6">
                                     <h6> Start Date <span class="icon-danger">*</span></h6>
                                     <div class="input-group border-input">
-                                        <input type="date" value="" placeholder="enter price" class="form-control border-input">
+                                        <input type="date" name="start" value="" placeholder="enter start date" class="form-control border-input">
                                         <span class="input-group-addon"></span>
                                     </div>
 
@@ -92,27 +92,34 @@
                                 <div class="col-md-6">
                                     <h6>End Date</h6>
                                     <div class="input-group border-input">
-                                        <input type="date" value="" placeholder="enter discount" class="form-control border-input">
+                                        <input type="date" name ="end" value="" placeholder="enter end date" class="form-control border-input">
                                         <span class="input-group-addon"></span>
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <h6>Tagline <span class="icon-danger">*</span></h6>
-                                <input type="text" class="form-control border-input" placeholder="enter the product tagline here...">
+                                <h6>Expenditure <span class="icon-danger">*</span></h6>
+                                <input type="text" name="expen" class="form-control border-input" placeholder="enter expenditure">
+                            </div>
+                            <div class="form-group">
+                                <h6>Event type <span class="icon-danger">*</span></h6>
+                                <input type="text" name="type" class="form-control border-input" placeholder="enter event type">
+                            </div>
+                            <div class="form-group">
+                                <h6>Event members <span class="icon-danger">*</span></h6>
+                                <input type="text" name="members" class="form-control border-input" placeholder="enter event memers">
+                            </div>
+                            <div class="form-group">
+                                <h6>Event Audience <span class="icon-danger">*</span></h6>
+                                <input type="text" name="audience" class="form-control border-input" placeholder="enter audience">
                             </div>
 
                             <div class="form-group">
-                                <h6>Description</h6>
-                                <textarea class="form-control textarea-limited border-input" placeholder="This is a textarea limited to 150 characters." rows="10", data-limit="150" ></textarea>
+                                <h6>REPORT</h6>
+                                <textarea name="report" class="form-control textarea-limited border-input" placeholder="This is a textarea limited to 150 characters." rows="7", data-limit="150" ></textarea>
                                 <h5><small><span id="textarea-limited-message" class="pull-right">150 characters left</span></small></h5>
-
                             </div>
-                            <label class="checkbox display-checkbox" for="checkbox1">
-                                <input type="checkbox" value="" id="checkbox1" data-toggle="checkbox">
-                                Display on landing page
-                            </label>
-                        </div>
+        
                     </div>
 
 
@@ -122,9 +129,6 @@
                         </div>
                         <div class="col-md-4 col-sm-4">
                             <button class="btn btn-primary btn-block">Save</button>
-                        </div>
-                        <div class="col-md-4 col-sm-4">
-                            <button class="btn btn-primary btn-fill btn-block">Save & Publish </button>
                         </div>
                     </div>
                 </form>
