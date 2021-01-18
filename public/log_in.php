@@ -63,13 +63,13 @@
                 <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1 ">
                     <div class="demo-card">
                         <h3 class="title">Welcome</h3>
-                        <form class="register-form" method="post">
-                            <label>Email</label>
-                            <input type="email" name="id" class="form-control" placeholder="Email">
+                        <form class="register-form" method="post" action="../functions/login.php">
+                            <label>Login ID</label>
+                            <input type="text" name="id" class="form-control" placeholder="Login ID">
 
                             <label>Password</label>
                             <input type="password" name="pass" class="form-control" placeholder="Password">
-                            <button class="btn btn-danger btn-block">Register</button>
+                            <button class="btn btn-danger btn-block">Login</button>
                         </form>
                         <div class="forgot">
                             <a href="#" class="btn btn-simple btn-danger">Forgot password?</a>
