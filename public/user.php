@@ -75,7 +75,6 @@ $id = $_GET['id'];
                     <div class="row">
 
                         <div class="col-md-12 ">
-                            <h4><small>Simple With Actions</small></h4>
                             <div class="table-responsive">
                                 <table class="table">
                                     <?php echo"   <table class='table'>

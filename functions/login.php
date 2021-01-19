@@ -20,10 +20,10 @@
 
 
            if($role == 'admin') {
-               header('location:../public/admin_page.php');
+               header('location:../public/admin.php');
                exit();
            } else {
-               header('location:../public/');
+               header('location:../public/index.php');
            }
         //}
 

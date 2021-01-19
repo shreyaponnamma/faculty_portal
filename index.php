@@ -63,7 +63,7 @@
                 <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1 ">
                     <div class="demo-card">
                         <h3 class="title">Welcome</h3>
-                        <form class="register-form" method="post" action="../functions/login.php">
+                        <form class="register-form" method="post" action="functions/login.php">
                             <label>Login ID</label>
                             <input type="text" name="id" class="form-control" placeholder="Login ID">
 
