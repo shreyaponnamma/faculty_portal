@@ -37,7 +37,7 @@
             <a href="https://vvce.ac.in/department/computer-science-engineering/">
                 <div class="logo-container">
                     <div class="logo">
-                        <img src="images/vvce.png">
+                        <img src="../images/vvce.png">
                     </div>
                     <div class="brand">
                         VVCE
