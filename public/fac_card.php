@@ -42,9 +42,9 @@ include('../config/config.php');
                     <div class="logo">
                         <img  src="../images/cs.png" >
                     </div>
-                    <div class="brand">
-                        VVCE
-                    </div>
+
+                    <h5 style="color: black">Department of Computer Science & Engineering</h5>
+
                 </div>
             </a>
         </div>
@@ -118,33 +118,6 @@ include('../config/config.php');
     </div>
 </div>
 
-<footer class="footer-demo section-nude">
-    <div class="container">
-        <nav class="pull-left">
-            <ul>
-
-                <li>
-                    <a href="http://www.creative-tim.com">
-                        Creative Tim
-                    </a>
-                </li>
-                <li>
-                    <a href="http://blog.creative-tim.com">
-                        Blog
-                    </a>
-                </li>
-                <li>
-                    <a href="http://www.creative-tim.com/product/rubik">
-                        Licenses
-                    </a>
-                </li>
-            </ul>
-        </nav>
-        <div class="copyright pull-right">
-            &copy; 2016, made with <i class="fa fa-heart heart"></i> by Creative Tim
-        </div>
-    </div>
-</footer>
 <script type ="text/javascript">
     function user(clicked_id) {
         if (window.confirm('Do you want to view?')){

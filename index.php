@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/png" href="assets/img/favicon.ico">
+    <link rel="icon" type="image/png" href="public/assets/img/favicon.ico">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
     <title>Login Page</title>
@@ -11,10 +11,10 @@
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
 
-    <link href="bootstrap3/css/bootstrap.css" rel="stylesheet" />
-    <link href="assets/css/ct-paper.css" rel="stylesheet"/>
-    <link href="assets/css/demo.css" rel="stylesheet" />
-    <link href="assets/css/examples.css" rel="stylesheet" />
+    <link href="public/bootstrap3/css/bootstrap.css" rel="stylesheet" />
+    <link href="public/assets/css/ct-paper.css" rel="stylesheet"/>
+    <link href="public/assets/css/demo.css" rel="stylesheet" />
+    <link href="public/assets/css/examples.css" rel="stylesheet" />
 
     <!--     Fonts and icons     -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
@@ -36,7 +36,7 @@
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="navigation-example-2">
+        <!--<div class="collapse navbar-collapse" id="navigation-example-2">
             <ul class="nav navbar-nav navbar-right">
                 <li>
                     <a href="../presentation.html#components" class="btn btn-simple">Components</a>
@@ -51,12 +51,12 @@
                     <a href="https://www.facebook.com/CreativeTim" target="_blank" class="btn btn-simple"><i class="fa fa-facebook"></i></a>
                 </li>
             </ul>
-        </div><!-- /.navbar-collapse -->
+        </div>--><!-- /.navbar-collapse -->
     </div><!-- /.container-->
 </nav>
 
 <div class="wrapper">
-    <div class="background" style="background-image: url('assets/img/landscape.jpg');">
+    <div class="background" style="background-image: url('public/assets/img/landscape.jpg');">
         <div class="filter-black"></div>
         <div class="container">
             <div class="row">
@@ -80,24 +80,24 @@
         </div>
 
         <div class="demo-footer text-center">
-            <h6> #add names <i class="fa fa-heart heart"></i> </h6>
+            <h6>  <i class="fa fa-heart heart"></i> </h6>
         </div>
     </div>
 </div>
 
 </body>
 
-<script src="assets/js/jquery-1.10.2.js" type="text/javascript"></script>
-<script src="assets/js/jquery-ui-1.10.4.custom.min.js" type="text/javascript"></script>
+<script src="public/assets/js/jquery-1.10.2.js" type="text/javascript"></script>
+<script src="public/assets/js/jquery-ui-1.10.4.custom.min.js" type="text/javascript"></script>
 
-<script src="bootstrap3/js/bootstrap.js" type="text/javascript"></script>
+<script src="public/bootstrap3/js/bootstrap.js" type="text/javascript"></script>
 
 <!--  Plugins -->
-<script src="assets/js/ct-paper-checkbox.js"></script>
-<script src="assets/js/ct-paper-radio.js"></script>
-<script src="assets/js/bootstrap-select.js"></script>
-<script src="assets/js/bootstrap-datepicker.js"></script>
+<script src="public/assets/js/ct-paper-checkbox.js"></script>
+<script src="public/assets/js/ct-paper-radio.js"></script>
+<script src="public/assets/js/bootstrap-select.js"></script>
+<script src="public/assets/js/bootstrap-datepicker.js"></script>
 
-<script src="assets/js/ct-paper.js"></script>
+<script src="public/assets/js/ct-paper.js"></script>
 
 </html>

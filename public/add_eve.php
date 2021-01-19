@@ -33,7 +33,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Creative Tim</a>
+            <a class="navbar-brand" href="#">VVCE</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->

@@ -37,7 +37,7 @@
             <a href="https://vvce.ac.in/department/computer-science-engineering/">
                 <div class="logo-container">
                     <div class="logo">
-                        <img src="assets/img/new_logo.png" alt="Creative Tim Logo">
+                        <img src="images/vvce.png">
                     </div>
                     <div class="brand">
                         VVCE
@@ -74,10 +74,11 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 col-md-offset-1">
-                        <div class="card card-image card-shadow">
-                            <img src="assets/img/presentation-page/mandala.jpg" alt="" width="550" height="380"/>
+                        <div class="card"> <center>
+                                <img src="../images/cs.png" alt="" style="width: 300px; height: 300px"/>
     
-                            <small>Vidya Vardhaka College of Engineering</small>
+                            <small style="color: #00bbff">Vidya Vardhaka College of Engineering</small>
+                            </center>
                         </div>
 
                     </div>
@@ -91,50 +92,51 @@
                         <h4>Dept of Computer Science & Engineering</h4>
                         <p>The Department of Computer Science and Engineering shall create professionally competent and socially responsible engineers capable of working in global environment.</p>
                     </div>
-                    <div class="col-md-3">
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
                         <div class="details-text">
                             Add Faculty Details
                         </div>
                         <div class="card card-image card-hover-effect">
                             <a target="_blank" href="reg.php">
-                                <img src="assets/img/presentation-page/examples/twitter-redesign.png">
+                                <img src="../images/fac.png">
                             </a>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-6">
                         <div class="details-text">
                             Add Event Details
                         </div>
                         <div class="card card-image">
                             <a target="_blank" href="add_eve.php">
-                                <img src="assets/img/presentation-page/examples/twitter-redesign.png">
+                                <img src="../images/event.png">
                             </a>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
                         <div class="details-text">
                             Faculty Details
                         </div>
                         <div class="card card-image">
                             <a target="_blank" href="fac_card.php">
-                                <img src="assets/img/presentation-page/examples/blog.jpg">
+                                <img src="../images/fac_d.png">
                             </a>
                         </div>
-
                     </div>
-
-
-                    <div class="col-md-3">
+                    <div class="col-md-6">
                         <div class="details-text">
                             Event Details
                         </div>
                         <div class="card card-image">
                             <a target="_blank" href="event_details.php">
-                                <img src="assets/img/presentation-page/examples/blog.jpg">
+                                <img src="../images/event_d.png">
                             </a>
                         </div>
-
                     </div>
+                </div>
                 </div>
             </div>
         </div>

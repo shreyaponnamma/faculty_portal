@@ -26,7 +26,11 @@ include('../config/config.php');
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
     <link href="assets/css/themify-icons.css" rel="stylesheet">
-
+<style>
+    table ,th,td{
+        border: 1px solid black;
+    }
+</style>
 </head>
 <body class="add-product">
 <nav class="navbar navbar-ct-primary" role="navigation-demo">
@@ -73,7 +77,7 @@ include('../config/config.php');
                 <div class="row">
 
                     <div class="col-md-12">
-                        <h4><small>Simple With Actions</small></h4>
+                        
                         <div class="table-responsive">
                             <?php echo"   <table class='table'>
                                     <thead class='text-primary'>
