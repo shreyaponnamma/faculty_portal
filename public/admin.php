@@ -37,7 +37,7 @@
             <a href="https://vvce.ac.in/department/computer-science-engineering/">
                 <div class="logo-container">
                     <div class="logo">
-                        <img src="images/vvce.png">
+                        <img src="../images/vvce.png">
                     </div>
                     <div class="brand">
                         VVCE
@@ -76,7 +76,6 @@
                     <div class="col-md-6 col-md-offset-1">
                         <div class="card"> <center>
                                 <img src="../images/cs.png" alt="" style="width: 300px; height: 300px"/>
-    
                             <small style="color: #00bbff">Vidya Vardhaka College of Engineering</small>
                             </center>
                         </div>
