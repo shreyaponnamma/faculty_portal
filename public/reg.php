@@ -31,7 +31,7 @@
                 var reader = new FileReader();
 
                 reader.onload = function(){
-                    $("#previewImg").attr("src", reader.result);
+                    $("#profileImage").attr("src", reader.result);
                 }
 
                 reader.readAsDataURL(file);
@@ -81,7 +81,7 @@
         <div class="section section-nude">
             <div class="container">
                 <h3>Add Faculty Details</h3>
-                <form method="post" action="../functions/new_faculty.php">
+                <form method="post" action="../functions/new_faculty.php" enctype="multipart/form-data">
                     <div class="row">
                         <div class="col-md-5 col-sm-5">
                             <h6>Photo</h6>
@@ -91,8 +91,9 @@
                                 </div>
                                 <div class="fileinput-preview fileinput-exists thumbnail img-no-padding" style="max-width: 370px; max-height: 250px;"></div>
                                 <div>
-                                    <span class="btn btn-default btn-file"><span class="fileinput-new">Select image</span><span class="fileinput-exists">Change</span><input type="file" name="photo" onchange="previewFile(this);"></span>
-                                    <a href="#" class="btn btn-simple btn-danger fileinput-exists" data-dismiss="fileinput"><i class="fa fa-times"></i> Remove</a>
+                                    <span class="btn btn-default btn-file"><span class="fileinput-new">Select image</span><span class="fileinput-exists">Change</span>
+                                        <input type="file" name="profileImage"  onchange="previewFile(this);" id="profileImage">
+                                    </span>
                                 </div>
                             </div>
 
@@ -118,12 +119,9 @@
                             </div>
                         </div>
                     </div>
-
-
                     <div class="row buttons-row">
-
                         <div class="col-md-4 col-sm-4">
-                            <button class="btn btn-primary btn-fill btn-block"> Submit </button>
+                            <button class="btn btn-primary btn-fill btn-block" name="save_profile"> Submit </button>
                         </div>
                     </div>
                 </form>

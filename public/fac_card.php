@@ -94,7 +94,7 @@ include('../config/config.php');
                             <div class=\"content\">
                                 <div class=\"author\">
                                     <a href=\"#\">
-                                        <img class=\"avatar\" src=\"assets/img/tim_vector.jpg\" alt=\"...\"/>
+                                        <img class=\"avatar\" src=\"../images/".$result['profile_image']."\" alt=\"...\"/>
 
                                         <h4 class=\"title\">" . $result['facultyname'] . "</h4>
                                     </a>
