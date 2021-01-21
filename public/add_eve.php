@@ -1,4 +1,9 @@
+<?php
+session_start();
 
+include('../config/config.php');
+
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -21,6 +26,9 @@
     <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
     <link href="assets/css/themify-icons.css" rel="stylesheet">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
 </head>
 <body class="add-product">
 <nav class="navbar navbar-ct-primary" role="navigation-demo">
@@ -39,15 +47,7 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
-                <!--<li>
-                    <a class="btn btn-neutral btn-simple" data-id="#components" data-scroll="true" href="javascript:void(0)">Components</a>
-                </li>
-                <li>
-                    <a class="btn btn-neutral btn-simple" data-id="#examples" data-scroll="true" href="javascript:void(0)">Examples</a>
-                </li>
-                <li>
-                    <a class="btn btn-neutral btn-simple" data-id="#demoPay" data-scroll="true" href="javascript:void(0)">Free Demo</a>
-                </li>-->
+
                 <li>
                     <a href="../functions/logout.php" class="btn btn-danger btn-fill"><i class="fa fa-power-off"></i> Log out</a>
                 </li>
@@ -55,8 +55,6 @@
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-->
 </nav>
-
-
 
 <div class="wrapper">
     <div class="main">
@@ -77,7 +75,6 @@
                                         <input type="date" name="start" value="" placeholder="enter start date" class="form-control border-input">
                                         <span class="input-group-addon"></span>
                                     </div>
-
                                 </div>
                                 <div class="col-md-6">
                                     <h6>End Date</h6>
@@ -95,13 +92,27 @@
                                 <h6>Event type <span class="icon-danger">*</span></h6>
                                 <input type="text" name="type" class="form-control border-input" placeholder="enter event type">
                             </div>
+                            <div class="wrapper1">
                             <div class="form-group">
                                 <h6>Event members <span class="icon-danger">*</span></h6>
-                                <input type="text" name="members" class="form-control border-input" placeholder="enter event memers">
+                                <label for="cars">Select the Faculty:</label>
+                                <?php
+                                echo"<select  name=\"input_name[]\"  id=\"cars\">";
+
+                                $sql = "select * from faculty";
+                                $row = mysqli_query($conn, $sql);
+                                while ($result = mysqli_fetch_assoc($row)) {
+                                    echo"<option  value = ".$result['facultyname'].">".$result['facultyname']."</option >";
+                                }
+                                echo"</select >";
+                                ?>
+                                <button class="btn btn-info add-btn">Add More</button>
+                            </div>
                             </div>
                             <div class="form-group">
-                                <h6>Event Audience <span class="icon-danger">*</span></h6>
+                                <br><h6>Event Audience <span class="icon-danger">*</span></h6>
                                 <input type="text" name="audience" class="form-control border-input" placeholder="enter audience">
+
                             </div>
 
                             <div class="form-group">
@@ -109,10 +120,7 @@
                                 <textarea name="report" class="form-control textarea-limited border-input" placeholder="This is a textarea limited to 150 characters." rows="7", data-limit="150" ></textarea>
                                 <h5><small><span id="textarea-limited-message" class="pull-right">150 characters left</span></small></h5>
                             </div>
-        
                     </div>
-
-
                     <div class="row buttons-row">
                         <div class="col-md-4 col-sm-4">
                             <button class="btn btn-danger btn-block">Cancel</button>
@@ -121,40 +129,56 @@
                             <button class="btn btn-primary btn-block">Save</button>
                         </div>
                     </div>
+                    </div>
+
                 </form>
+                <script type="text/javascript">
+                    $(document).ready(function () {
+                        // allowed maximum input fields
+                        var max_input = 10;
+                        // initialize the counter for textbox
+                        var x = 1;
+                        // handle click event on Add More button
+                        $('.add-btn').click(function (e) {
+                            e.preventDefault();
+                            if (x < max_input) { // validate the condition
+                                x++; // increment the counter
+                                $('.wrapper1').append(`
+                                    <div class="form-group">
+                                <label for="cars">Select the facuty:</label>
+                                <?php
+                                echo "<select  name=\"input_name[]\"  id=\"cars\">";
+
+                                $sql = "select * from faculty";
+                                $row = mysqli_query($conn, $sql);
+                                while ($result = mysqli_fetch_assoc($row)) {
+                                    echo "<option  value = " . $result['facultyname'] . ">" . $result['facultyname'] . "</option >";
+                                }
+                                echo "</select >";
+                                ?>
+                            </div>
+
+                                                `); // add input field
+                            }
+                        });
+
+                        // handle click event of the remove link
+                        $('.wrapper1').on("click", ".remove-lnk", function (e) {
+                            e.preventDefault();
+                            $(this).parent('div').remove();  // remove input field
+                            x--; // decrement the counter
+                        })
+
+                    });
+                </script>
+
+
             </div>
         </div>
     </div>
 </div>
 
 
-<footer class="footer-demo footer-black">
-    <div class="container">
-        <nav class="pull-left">
-            <ul>
-
-                <li>
-                    <a href="http://www.creative-tim.com">
-                        Creative Tim
-                    </a>
-                </li>
-                <li>
-                    <a href="http://blog.creative-tim.com">
-                        Blog
-                    </a>
-                </li>
-                <li>
-                    <a href="http://www.creative-tim.com/product/rubik">
-                        Licenses
-                    </a>
-                </li>
-            </ul>
-        </nav>
-        <div class="copyright pull-right">
-            &copy; 2016, made with <i class="fa fa-heart heart"></i> by Creative Tim
-        </div>
-    </div>
-</footer>
 
 </body>
 
