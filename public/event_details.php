@@ -99,9 +99,7 @@ include('../config/config.php');
                                     <th>
                                         Type
                                     </th>
-                                    <th>
-                                        Members
-                                    </th>
+                                    
                                     <th>
                                         Target Audience
                                     </th>

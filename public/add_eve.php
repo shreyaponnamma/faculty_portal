@@ -61,7 +61,7 @@ include('../config/config.php');
         <div class="section section-nude">
             <div class="container">
                 <h3>Add Event</h3>
-                <form method="post" action="../functions/new.php">
+                <form method="post" action="../functions/new_event.php">
                     <div class="row">
                         <div class="col-md-7 col-sm-7">
                             <div class="form-group">

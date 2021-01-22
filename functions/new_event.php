@@ -7,29 +7,40 @@ include "../config/config.php";
 
 
 if (isset($_POST["input_name"]) && is_array($_POST["input_name"])){
-    $name = mysqli_real_escape_string($conn, $_POST["name"]);
-    $Sdate = mysqli_real_escape_string($conn, $_POST["start"]);
-    $Edate = mysqli_real_escape_string($conn, $_POST["end"]);
-    $expen = mysqli_real_escape_string($conn, $_POST["expen"]);
-    $type = mysqli_real_escape_string($conn, $_POST["type"]);
-    //$members = mysqli_real_escape_string($conn, $_POST["members"]);
-    $audience = mysqli_real_escape_string($conn, $_POST["audience"]);
-    $report = mysqli_real_escape_string($conn, $_POST["report"]);
+    $name =   $_POST["name"];
+    $Sdate =   $_POST["start"];
+    $Edate =   $_POST["end"];
+    $expen =   $_POST["expen"];
+    $type =   $_POST["type"];
+    //$members =   $_POST["members"]);
+    $audience =   $_POST["audience"];
+    $report =   $_POST["report"];
 
-    $input_name = $_POST["input_name[]"];
-    $sql = "select max(eid) as latest from events";
-    $row = mysqli_query($conn, $sql);
+
+
+
+    $sql = "INSERT INTO events (eventname,eventstartdate,eventenddate,totalexpenditure,eventtype,targetaudience,eventreport) VALUES('$name', '$Sdate', '$Edate', '$expen', '$type', '$audience', '$report')";
+    if(mysqli_query($conn, $sql)){
+        echo "<script>alert('Faculty Added')</script>";
+        echo "<script>window.location.replace('../public/fac_card.php')</script>";
+    } else {
+        echo "<script>alert('Insertion failed.. Try Again !!')</script>";
+        echo "<script>window.location.replace('../public/fac_card.php')</script>";
+    }
+
+    $input_name = $_POST["input_name"];
+    $sql1 = "select max(eid) as latest from events";
+    $row = mysqli_query($conn, $sql1);
     $result = mysqli_fetch_assoc($row);
     $max_eid = $result['latest'];
 
-    foreach ($input_name as $column) {
-        $sql = "insert into event_sub (eid,fid) VALUES ('$max_eid','$column')";
-        $row = mysqli_query($conn, $sql);
+    foreach ($input_name as $key => $value) {
+        $sql2 = "insert into event_sub (eid,fid) VALUES ('$max_eid','$value')";
+        $row = mysqli_query($conn, $sql2);
     }
 
 
-    $query1 = "INSERT INTO events (eventname,eventstartdate,eventenddate,totalexpenditure,eventtype,targetaudience,eventreport) VALUES(?,?,?,?,?,?,?)";
-    $stmt = $conn->prepare($query1);
+ /*   $stmt = $conn->prepare($query1);
     $stmt->bind_param('sssdsss', $name, $Sdate, $Edate, $expen, $type, $audience, $report);
 
     if ($stmt->execute()) {
@@ -39,7 +50,7 @@ if (isset($_POST["input_name"]) && is_array($_POST["input_name"])){
         error_log($stmt->error);
         echo "<script>alert('Event insertion failed !!')</script>";
         echo "<script>window.location.replace('../public/event_details.php')</script>";
-    }
+    }*/
 
 }
 

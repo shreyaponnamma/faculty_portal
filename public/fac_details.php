@@ -93,7 +93,7 @@ include('../config/config.php');
                                     </thead>";
 
 
-                                    $sql = "select * from faculty where fid=$id";
+                                    $sql = "select * from faculty";
                                     $row = mysqli_query($conn, $sql);
                                     while ($result = mysqli_fetch_assoc($row)) {
                                         $id1 = $result['fid'];
