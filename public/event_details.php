@@ -119,7 +119,6 @@ include('../config/config.php');
                                         <td>" . $result['eventenddate'] . "</td>
                                         <td>" . $result['totalexpenditure'] . "</td>
                                         <td>" . $result['eventtype'] . "</td>
-                                        <td>" . $result['eventmembers'] . "</td>
                                         <td>" . $result['targetaudience'] . "</td>   
                                         
                                         <td class=\"td-actions text-right\">

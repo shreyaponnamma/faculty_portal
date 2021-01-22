@@ -61,7 +61,7 @@ include('../config/config.php');
         <div class="section section-nude">
             <div class="container">
                 <h3>Add Event</h3>
-                <form method="post" action="../functions/new_event.php">
+                <form method="post" action="../functions/new.php">
                     <div class="row">
                         <div class="col-md-7 col-sm-7">
                             <div class="form-group">
@@ -102,11 +102,11 @@ include('../config/config.php');
                                 $sql = "select * from faculty";
                                 $row = mysqli_query($conn, $sql);
                                 while ($result = mysqli_fetch_assoc($row)) {
-                                    echo"<option  value = ".$result['facultyname'].">".$result['facultyname']."</option >";
+                                    echo"<option  value = ".$result['fid'].">".$result['facultyname']."</option >";
                                 }
                                 echo"</select >";
                                 ?>
-                                <button class="btn btn-info add-btn">Add More</button>
+                                <button class="btn btn-info btn-sm add-btn">Add More</button>
                             </div>
                             </div>
                             <div class="form-group">
@@ -152,13 +152,14 @@ include('../config/config.php');
                                 $sql = "select * from faculty";
                                 $row = mysqli_query($conn, $sql);
                                 while ($result = mysqli_fetch_assoc($row)) {
-                                    echo "<option  value = " . $result['facultyname'] . ">" . $result['facultyname'] . "</option >";
+                                    echo "<option  value = " . $result['fid'] . ">" . $result['facultyname'] . "</option >";
                                 }
-                                echo "</select >";
-                                ?>
-                            </div>
+                                echo "             
 
-                                                `); // add input field
+                                </select > 
+                                 <a style='color: red' href=\"#\" class=\"remove-lnk\">Remove</a>";
+                                ?>
+                            </div> `); // add input field
                             }
                         });
 
