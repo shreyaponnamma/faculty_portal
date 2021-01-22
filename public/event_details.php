@@ -1,5 +1,6 @@
 <?php
 session_start();
+include("../functions/export.php");
 
 include('../config/config.php');
 
@@ -21,6 +22,17 @@ include('../config/config.php');
     <link href="assets/css/ct-paper.css" rel="stylesheet"/>
     <link href="assets/css/demo.css" rel="stylesheet" />
     <link href="assets/css/examples.css" rel="stylesheet" />
+
+    <link rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+        <script
+        src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        </head>
+
 
     <!--     Fonts and icons     -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
@@ -61,6 +73,8 @@ include('../config/config.php');
                 <li>
                     <a href="../functions/logout.php" class="btn btn-danger btn-fill"><i class="fa fa-power-off"></i> Log out</a>
                 </li>
+
+                
             </ul>
         </div><!-- /.navbar-collapse -->
 
@@ -77,6 +91,10 @@ include('../config/config.php');
                 <div class="row">
 
                     <div class="col-md-12">
+                    <form action="#" method="post">
+                                <button type="submit" id="export" name="export"
+                                 value="Export to excel" class="btn btn-success">Export To Excel</button>
+                                </form>
                         
                         <div class="table-responsive">
                             <?php echo"   <table class='table'>
@@ -107,20 +125,17 @@ include('../config/config.php');
                                     </th>
                                     </thead>";
 
-
-                            $sql = "select * from events";
-                            $row = mysqli_query($conn, $sql);
-                            while ($result = mysqli_fetch_assoc($row)) {
-                                $id1 = $result['eid'];
+                                    foreach($items as $item) {
+                            
                                 echo "<tr>
-                                        <td>" . $result['eid'] . "</td>
-                                        <td>" . $result['eventname'] . "</td>
-                                        <td>" . $result['eventstartdate'] . "</td>
-                                        <td>" . $result['eventenddate'] . "</td>
-                                        <td>" . $result['totalexpenditure'] . "</td>
-                                        <td>" . $result['eventtype'] . "</td>
-                                        <td>" . $result['eventmembers'] . "</td>
-                                        <td>" . $result['targetaudience'] . "</td>   
+                                        <td>" . $item['eid'] . "</td>
+                                        <td>" . $item['eventname'] . "</td>
+                                        <td>" . $item['eventstartdate'] . "</td>
+                                        <td>" . $item['eventenddate'] . "</td>
+                                        <td>" . $item['totalexpenditure'] . "</td>
+                                        <td>" . $item['eventtype'] . "</td>
+                                        <td>" . $item['eventmembers'] . "</td>
+                                        <td>" . $item['targetaudience'] . "</td>   
                                         
                                         <td class=\"td-actions text-right\">
                                         <button type=\"button\" rel=\"tooltip\" title=\"View Profile\" class=\"btn btn-info btn-simple btn-sm\">
@@ -138,6 +153,10 @@ include('../config/config.php');
 
                             }
                             ?>
+
+                           
+                                
+                    
 
 
                             </table>
