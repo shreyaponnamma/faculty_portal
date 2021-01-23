@@ -79,27 +79,44 @@ $id = $_GET['id'];
                                 <table class="table">
                                     <?php echo"   <table class='table'>
                                     <thead class='text-primary'>
-                                    <th>
-                                        Faculty Id
+                                   <th>
+                                        Event Id
                                     </th>
                                     <th>
                                        Name
                                     </th>
                                     <th>
-                                        Date Of Joining
+                                        Start Date
+                                    </th>
+                                    <th >
+                                        End Date
+                                    </th>
+                                    <th>
+                                        Expenditure
+                                    </th>
+                                    <th>
+                                        Type
+                                    </th>
+                                    
+                                    <th>
+                                        Target Audience
                                     </th>
                                  
                                     </thead>";
 
 
-                                    $sql = "select * from faculty where fid=$id";
+                                    $sql = "select * from events, event_sub where events.eid = event_sub.eid and event_sub.fid = $id";
                                     $row = mysqli_query($conn, $sql);
                                     while ($result = mysqli_fetch_assoc($row)) {
                                         $id1 = $result['fid'];
                                         echo "<tr>
-                                        <td>" . $result['fid'] . "</td>
-                                        <td>" . $result['facultyname'] . "</td>
-                                        <td>" . $result['dateofjoining'] . "</td>
+                                        <td>" . $result['eid'] . "</td>
+                                        <td>" . $result['eventname'] . "</td> 
+                                        <td>" . $result['eventstartdate'] . "</td>
+                                        <td>" . $result['eventenddate'] . "</td>
+                                        <td>" . $result['totalexpenditure'] . "</td>
+                                        <td>" . $result['eventtype'] . "</td>
+                                        <td>" . $result['targetaudience'] . "</td> 
                                           
                                         
                                         <td class=\"td-actions text-right\">
