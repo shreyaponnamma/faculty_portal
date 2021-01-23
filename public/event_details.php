@@ -106,19 +106,16 @@ include('../config/config.php');
                                     </thead>";
 
 
-                            $sql = "select * from events";
-                            $row = mysqli_query($conn, $sql);
-                            while ($result = mysqli_fetch_assoc($row)) {
-                                $id1 = $result['eid'];
+                            foreach ($items as $item){
                                 echo "<tr>
-                                        <td>" . $result['eid'] . "</td>
-                                        <td>" . $result['eventname'] . "</td>
-                                        <td>" . $result['eventstartdate'] . "</td>
-                                        <td>" . $result['eventenddate'] . "</td>
-                                        <td>" . $result['totalexpenditure'] . "</td>
-                                        <td>" . $result['eventtype'] . "</td>
-                                        <td>" . $result['eventmembers'] . "</td>
-                                        <td>" . $result['targetaudience'] . "</td>";
+                                        <td>" . $item['eid'] . "</td>
+                                        <td>" . $item['eventname'] . "</td>
+                                        <td>" . $item['eventstartdate'] . "</td>
+                                        <td>" . $item['eventenddate'] . "</td>
+                                        <td>" . $item['totalexpenditure'] . "</td>
+                                        <td>" . $item['eventtype'] . "</td>
+                                        <td>" . $item['eventmembers'] . "</td>
+                                        <td>" . $item['targetaudience'] . "</td>";
 
 
                                         echo"";
