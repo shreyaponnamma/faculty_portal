@@ -117,9 +117,9 @@ include('../config/config.php');
                                         <td>" . $result['eventenddate'] . "</td>
                                         <td>" . $result['totalexpenditure'] . "</td>
                                         <td>" . $result['eventtype'] . "</td>
+                                        <td>" . $result['eventmembers'] . "</td>
                                         <td>" . $result['targetaudience'] . "</td>";
 
-                                        $sql1 = "select * from events, event_sub,faculty where events.eid = event_sub.eid and event_sub.fid = faculty.fid and event.id = $id1";
 
                                         echo"";
                                         
