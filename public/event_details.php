@@ -112,11 +112,19 @@ include('../config/config.php');
                                     <th>
                                         Target Audience
                                     </th>
+                                    <th>
+                                    Faculty Name
+</th>
                                     </thead>";
 
                                     foreach($items as $item) {
-                            
-                                echo "<tr>
+                                        $id = $item['eid'];
+                                        $sql1 = "select count(*) as cnt from events, event_sub,faculty where events.eid = event_sub.eid and event_sub.fid = faculty.fid and events.eid = '$id'";
+                                        $row = mysqli_query($conn, $sql1);
+                                        $result = mysqli_fetch_assoc($row);
+                                        $cnt = $result['cnt'];
+
+                                        echo "<tr>
                                         <td>" . $item['eid'] . "</td>
                                         <td>" . $item['eventname'] . "</td>
                                         <td>" . $item['eventstartdate'] . "</td>
@@ -124,18 +132,9 @@ include('../config/config.php');
                                         <td>" . $item['totalexpenditure'] . "</td>
                                         <td>" . $item['eventtype'] . "</td>
                                         <td>" . $item['targetaudience'] . "</td>   
+                                         <td rowspan='$cnt'>".$item['facultyname']."</td>
                                         
-                                        <td class=\"td-actions text-right\">
-                                        <button type=\"button\" rel=\"tooltip\" title=\"View Profile\" class=\"btn btn-info btn-simple btn-sm\">
-                                            <i class=\"fa fa-user\"></i>
-                                        </button>
-                                        <button type=\"button\" rel=\"tooltip\" title=\"Edit Profile\" class=\"btn btn-success btn-simple btn-sm\">
-                                            <i class=\"fa fa-edit\"></i>
-                                        </button>
-                                        <button type=\"button\" rel=\"tooltip\" title=\"Remove\" class=\"btn btn-danger btn-simple btn-sm\">
-                                            <i class=\"fa fa-times\"></i>
-                                        </button>
-                                    </td>                                
+                                                                     
                                          
                                     </tr>";
 

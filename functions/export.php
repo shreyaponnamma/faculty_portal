@@ -1,13 +1,15 @@
 <?php
     include '../config/config.php';
 
-$query = "select * from events";
-$row = mysqli_query($conn, $query);
+$sql1 = "select * from events, event_sub,faculty where events.eid = event_sub.eid and event_sub.fid = faculty.fid ";
+$row = mysqli_query($conn, $sql1);
+
 $items = array();
 
 while( $result = $row->fetch_assoc() ) {
 $items[] = $result;
 }
+//print_r($items);
 
 if(isset($_POST["export"])) {
 
