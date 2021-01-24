@@ -21,11 +21,11 @@ if (isset($_POST["input_name"]) && is_array($_POST["input_name"])){
 
     $sql = "INSERT INTO events (eventname,eventstartdate,eventenddate,totalexpenditure,eventtype,targetaudience,eventreport) VALUES('$name', '$Sdate', '$Edate', '$expen', '$type', '$audience', '$report')";
     if(mysqli_query($conn, $sql)){
-        echo "<script>alert('Faculty Added')</script>";
-        echo "<script>window.location.replace('../public/fac_card.php')</script>";
+        echo "<script>alert('Event Added')</script>";
+        echo "<script>window.location.replace('../public/event_details.php')</script>";
     } else {
         echo "<script>alert('Insertion failed.. Try Again !!')</script>";
-        echo "<script>window.location.replace('../public/fac_card.php')</script>";
+        echo "<script>window.location.replace('../public/event_details.php')</script>";
     }
 
     $input_name = $_POST["input_name"];

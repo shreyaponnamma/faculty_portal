@@ -108,9 +108,7 @@ include('../config/config.php');
                                     <th>
                                         Type
                                     </th>
-                                    <th>
-                                        Members
-                                    </th>
+                                   
                                     <th>
                                         Target Audience
                                     </th>
@@ -125,7 +123,6 @@ include('../config/config.php');
                                         <td>" . $item['eventenddate'] . "</td>
                                         <td>" . $item['totalexpenditure'] . "</td>
                                         <td>" . $item['eventtype'] . "</td>
-                                        <td>" . $item['eventmembers'] . "</td>
                                         <td>" . $item['targetaudience'] . "</td>   
                                         
                                         <td class=\"td-actions text-right\">

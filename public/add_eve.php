@@ -93,21 +93,21 @@ include('../config/config.php');
                                 <input type="text" name="type" class="form-control border-input" placeholder="enter event type">
                             </div>
                             <div class="wrapper1">
-                            <div class="form-group">
-                                <h6>Event members <span class="icon-danger">*</span></h6>
-                                <label for="cars">Select the Faculty:</label>
-                                <?php
-                                echo"<select  name=\"input_name[]\"  id=\"cars\">";
+                                <div class="form-group">
+                                    <h6>Event members <span class="icon-danger">*</span></h6>
+                                    <label for="cars">Select the Faculty:</label>
+                                    <?php
+                                    echo"<select  name=\"input_name[]\"  id=\"cars\">";
 
-                                $sql = "select * from faculty";
-                                $row = mysqli_query($conn, $sql);
-                                while ($result = mysqli_fetch_assoc($row)) {
-                                    echo"<option  value = ".$result['facultyname'].">".$result['facultyname']."</option >";
-                                }
-                                echo"</select >";
-                                ?>
-                                <button class="btn btn-info add-btn">Add More</button>
-                            </div>
+                                    $sql = "select * from faculty";
+                                    $row = mysqli_query($conn, $sql);
+                                    while ($result = mysqli_fetch_assoc($row)) {
+                                        echo"<option  value = ".$result['fid'].">".$result['facultyname']."</option >";
+                                    }
+                                    echo"</select >";
+                                    ?>
+                                    <button class="btn btn-info btn-sm add-btn">Add More</button>
+                                </div>
                             </div>
                             <div class="form-group">
                                 <br><h6>Event Audience <span class="icon-danger">*</span></h6>
@@ -120,15 +120,15 @@ include('../config/config.php');
                                 <textarea name="report" class="form-control textarea-limited border-input" placeholder="This is a textarea limited to 150 characters." rows="7", data-limit="150" ></textarea>
                                 <h5><small><span id="textarea-limited-message" class="pull-right">150 characters left</span></small></h5>
                             </div>
-                    </div>
-                    <div class="row buttons-row">
-                        <div class="col-md-4 col-sm-4">
-                            <button class="btn btn-danger btn-block">Cancel</button>
                         </div>
-                        <div class="col-md-4 col-sm-4">
-                            <button class="btn btn-primary btn-block">Save</button>
+                        <div class="row buttons-row">
+                            <div class="col-md-4 col-sm-4">
+                                <button class="btn btn-danger btn-block">Cancel</button>
+                            </div>
+                            <div class="col-md-4 col-sm-4">
+                                <button class="btn btn-primary btn-block">Save</button>
+                            </div>
                         </div>
-                    </div>
                     </div>
 
                 </form>
@@ -152,13 +152,14 @@ include('../config/config.php');
                                 $sql = "select * from faculty";
                                 $row = mysqli_query($conn, $sql);
                                 while ($result = mysqli_fetch_assoc($row)) {
-                                    echo "<option  value = " . $result['facultyname'] . ">" . $result['facultyname'] . "</option >";
+                                    echo "<option  value = " . $result['fid'] . ">" . $result['facultyname'] . "</option >";
                                 }
-                                echo "</select >";
-                                ?>
-                            </div>
+                                echo "             
 
-                                                `); // add input field
+                                </select > 
+                                 <a style='color: red' href=\"#\" class=\"remove-lnk\">Remove</a>";
+                                ?>
+                            </div> `); // add input field
                             }
                         });
 
