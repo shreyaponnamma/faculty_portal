@@ -121,7 +121,7 @@ include('../config/config.php');
 <script type ="text/javascript">
     function user(clicked_id) {
         if (window.confirm('Do you want to view?')){
-            window.location.href = ("user.php?id="+clicked_id);
+            window.location.href = ("profile.php?id="+clicked_id);
 
         } else {
             die();
