@@ -119,10 +119,11 @@ include('../config/config.php');
 
                                     foreach($items as $item) {
                                         $id = $item['eid'];
-                                        $sql1 = "select count(*) as cnt from events, event_sub,faculty where events.eid = event_sub.eid and event_sub.fid = faculty.fid and events.eid = '$id'";
+                                        $sql1 = "select * from events, event_sub,faculty where events.eid = event_sub.eid and event_sub.fid = faculty.fid and events.eid = '$id'";
                                         $row = mysqli_query($conn, $sql1);
                                         $result = mysqli_fetch_assoc($row);
-                                        $cnt = $result['cnt'];
+                                        //$cnt = $result['cnt'];
+
 
                                         echo "<tr>
                                         <td>" . $item['eid'] . "</td>
@@ -132,7 +133,7 @@ include('../config/config.php');
                                         <td>" . $item['totalexpenditure'] . "</td>
                                         <td>" . $item['eventtype'] . "</td>
                                         <td>" . $item['targetaudience'] . "</td>   
-                                         <td rowspan='$cnt'>".$item['facultyname']."</td>
+                                        <td >".$item['facultyname']."<br></td>
                                         
                                                                      
                                          
